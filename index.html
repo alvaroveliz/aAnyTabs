@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>aAnyTabs</title>
   <link rel="stylesheet" href="stylesheets/app.css" />
-  <script src="components/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
   <script src="javascripts/jquery.aAnyTabs.js"></script>
   <script>
     $(document).ready(function(){
@@ -15,9 +15,9 @@
       });
 
       $('#tabs-2').aAnyTabs({
-        indexElement : 'li',
+        indexElement : 'dd',
         dataId : 'tabs-2-data',
-        dataElement : 'p',
+        dataElement : 'span',
       });
 
       $('#tabs-img').aAnyTabs({
@@ -30,60 +30,169 @@
 </head>
 <body>
   
-  <h1> Tabs : UL, LI + P</h1>
-  <div id="tabs">
-    <ul class="t-menu">
-      <li><a href="javascript:void(0);">tab 1</a></li>
-      <li><a href="javascript:void(0);">tab 2</a></li>
-      <li><a href="javascript:void(0);">tab 3</a></li>
-      <li><a href="javascript:void(0);">tab 4</a></li>
-    </ul>
-  </div>
+  <header>
+    <section id="top">
+      <h1>Alvaro's Any Tabs Plugin for jQuery</h1>  
+      <nav id="menu">
+        <ul>
+          <li><a href="javascript:void(0);">aAnyTabs</a></li>
+          <li><a href="https://github.com/alvaroveliz/aAnyTabs">Github</a></li>
+          <li><a href="javascript:void(0);">Downloads</a></li>
+        </ul>
+      </nav>
+      <h2><a href="https://github.com/alvaroveliz/aAnyTabs">aAnyTabs</a> is a jQuery plugin that will use any kind of element as a tab.</h2>
+      <hr>
+    </section>
+  </header>
 
-  <div id="tabs-data">
-    <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolorem exercitationem adipisci. Consequatur laborum rerum numquam nisi molestiae quidem officiis blanditiis et temporibus corrupti neque modi suscipit mollitia amet vel.</p>
-    <p>2. Eligendi repellat molestias dolor impedit dignissimos porro deleniti reiciendis blanditiis sit ratione error est in deserunt non fugiat similique sint quam earum ipsa quaerat soluta repellendus quia totam. Tenetur dignissimos.</p>
-    <p>3. Odio suscipit amet eligendi numquam nemo quos saepe voluptates. Tenetur rem rerum nam suscipit blanditiis vitae hic illo quaerat eaque perspiciatis explicabo beatae quibusdam labore quia ab repellat quos in!</p>
-    <p>4. Veritatis ipsa optio velit necessitatibus sequi suscipit ad animi alias illum dolorem similique provident quae magnam doloribus repellat. Voluptatibus mollitia tenetur temporibus praesentium esse vero voluptatem fuga dolore repellat aperiam.</p>
-  </div>
+  <section id="content">
+    <h1>How it Works</h1>
+    <p>This plugin uses the index of an element and relates to another element with the same index. It uses the index as key to relations without using element id's</p>
 
-  <div id="tabs-2">
-    <ul class="t-menu">
-      <li><a href="javascript:void(0);">tab 1</a></li>
-      <li><a href="javascript:void(0);">tab 2</a></li>
-      <li><a href="javascript:void(0);">tab 3</a></li>
-      <li><a href="javascript:void(0);">tab 4</a></li>
-    </ul>
-  </div>
+    <h1>Usage</h1>
+    <pre>$('#tabs').aAnyTabs({
+  indexElement : 'li',
+  dataId : 'tabs-data',
+  dataElement : 'p',
+});</pre>
 
-  <div id="tabs-2-data">
-    <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolorem exercitationem adipisci. Consequatur laborum rerum numquam nisi molestiae quidem officiis blanditiis et temporibus corrupti neque modi suscipit mollitia amet vel.</p>
-    <p>2. Eligendi repellat molestias dolor impedit dignissimos porro deleniti reiciendis blanditiis sit ratione error est in deserunt non fugiat similique sint quam earum ipsa quaerat soluta repellendus quia totam. Tenetur dignissimos.</p>
-    <p>3. Odio suscipit amet eligendi numquam nemo quos saepe voluptates. Tenetur rem rerum nam suscipit blanditiis vitae hic illo quaerat eaque perspiciatis explicabo beatae quibusdam labore quia ab repellat quos in!</p>
-    <p>4. Veritatis ipsa optio velit necessitatibus sequi suscipit ad animi alias illum dolorem similique provident quae magnam doloribus repellat. Voluptatibus mollitia tenetur temporibus praesentium esse vero voluptatem fuga dolore repellat aperiam.</p>
-  </div>
+    <h1>Options</h1>
+    <dl>
+      <dt>indexElement</dt>
+      <dd>The element that we use as "index"</dd>
+      <dt>dataId</dt>
+      <dd>The "id" of the element who has the data</dd>
+      <dt>dataElement</dt>
+      <dd>The element with the data, the <em>indexElement</em> connect with this type of element.</dd>
+    </dl>
 
-  <hr />
 
-  <h1>Tabs : IMG + SPAN</h1>
+    <h1> Example 1 : UL, LI + P</h1>
+    <div id="tabs">
+      <ul class="t-menu">
+        <li><a href="javascript:void(0);">jQuery</a></li>
+        <li><a href="javascript:void(0);">HTML</a></li>
+        <li><a href="javascript:void(0);">tab 3</a></li>
+        <li><a href="javascript:void(0);">tab 4</a></li>
+        <li><a href="javascript:void(0);">tab 5</a></li>
+      </ul>
+    </div>
 
-  <div id="tabs-img">
-    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/1" alt="imagen 1" /></a>
-    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/2" alt="imagen 2" /></a>
-    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/3" alt="imagen 3" /></a>
-    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/4" alt="imagen 4" /></a>
-  </div>
+    <div id="tabs-data">
+      <p>
+        <code>$('#tabs').aAnyTabs({
+  indexElement : 'li',
+  dataId : 'tabs-data',
+  dataElement : 'p',
+});</code>
+      </p>
+      <p>
+        <code>&lt;div id="tabs"&gt;
+  &lt;ul class="t-menu"&gt;
+    &lt;li&gt;&lt;a href="javascript:void(0);"&gt;jQuery&lt;/a&gt;&lt;/li&gt; &lt;!-- index element : li --&gt;
+    &lt;li&gt;&lt;a href="javascript:void(0);"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="javascript:void(0);"&gt;tab 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="javascript:void(0);"&gt;tab 4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="javascript:void(0);"&gt;tab 5&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 
-  <div id="tabs-img-data">
-    <span>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ipsum veniam enim debitis doloremque distinctio velit omnis possimus impedit hic fugiat sed reprehenderit quis saepe aspernatur nihil expedita repudiandae cum?</span>
-    <span>2. Quo dolor sint omnis accusamus et modi sequi dolorum magnam. A impedit libero sapiente sit adipisci tempora tempore magnam id totam in laboriosam expedita voluptates omnis neque delectus nesciunt voluptas!</span>
-    <span>3. Illo laborum quidem ab eum libero dolor nesciunt ipsam maiores voluptas a eaque totam perspiciatis expedita aspernatur ipsa repudiandae at. Nisi facilis assumenda et culpa sapiente quia deserunt cupiditate odio.</span>
-    <span>4. Quas reiciendis laudantium animi labore adipisci dignissimos ea autem maxime sed ipsam eius rem facilis enim alias deserunt dolorem est repellendus. Ullam numquam ipsam quae eveniet placeat inventore provident explicabo.</span>
-  </div>
+&lt;div id="tabs-data"&gt; &lt;!-- data id --&gt;
+  &lt;p&gt;...&lt;/p&gt; &lt;!-- data element : p --&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;</code>
+      </p>
+      <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolorem exercitationem adipisci. Consequatur laborum rerum numquam nisi molestiae quidem officiis blanditiis et temporibus corrupti neque modi suscipit mollitia amet vel.</p>
+      <p>2. Eligendi repellat molestias dolor impedit dignissimos porro deleniti reiciendis blanditiis sit ratione error est in deserunt non fugiat similique sint quam earum ipsa quaerat soluta repellendus quia totam. Tenetur dignissimos.</p>
+      <p>3. Odio suscipit amet eligendi numquam nemo quos saepe voluptates. Tenetur rem rerum nam suscipit blanditiis vitae hic illo quaerat eaque perspiciatis explicabo beatae quibusdam labore quia ab repellat quos in!</p>
+      <p>4. Veritatis ipsa optio velit necessitatibus sequi suscipit ad animi alias illum dolorem similique provident quae magnam doloribus repellat. Voluptatibus mollitia tenetur temporibus praesentium esse vero voluptatem fuga dolore repellat aperiam.</p>
+    </div>
 
-  <hr />
+    <div id="tabs-2">
+      <dl>
+        <dd><a href="javascript:void(0);">jQuery</a></dd>
+        <dd><a href="javascript:void(0);">HTML</a></dd>
+        <dd><a href="javascript:void(0);">tab 3</a></dd>
+        <dd><a href="javascript:void(0);">tab 4</a></dd>
+        <dd><a href="javascript:void(0);">tab 5</a></dd>
+      </dl>
+    </div>
 
-  <h1>Tabs</h1>
+    <div id="tabs-2-data">
+      <span>
+        <code>$('#tabs-2').aAnyTabs({
+  indexElement : 'dd',
+  dataId : 'tabs-2-data',
+  dataElement : 'span',
+});</code>
+      </span>
+      <span>
+        <code>&lt;div id="tabs-2"&gt;
+  &lt;dl&gt;
+    &lt;dd&gt;&lt;a href="javascript:void(0);"&gt;jQuery&lt;/a&gt;&lt;/dd&gt; &lt;!-- index element : dd --&gt;
+    &lt;dd&gt;&lt;a href="javascript:void(0);"&gt;HTML&lt;/a&gt;&lt;/dd&gt;
+    &lt;dd&gt;&lt;a href="javascript:void(0);"&gt;tab 3&lt;/a&gt;&lt;/dd&gt;
+    &lt;dd&gt;&lt;a href="javascript:void(0);"&gt;tab 4&lt;/a&gt;&lt;/dd&gt;
+    &lt;dd&gt;&lt;a href="javascript:void(0);"&gt;tab 5&lt;/a&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+
+&lt;div id="tabs-2-data"&gt;  &lt;!-- data id --&gt;
+  &lt;span&gt;...&lt;/span&gt; &lt;!-- data element : span --&gt;
+  &lt;span&gt;...&lt;/span&gt;
+  &lt;span&gt;...&lt;/span&gt;
+  &lt;span&gt;...&lt;/span&gt;
+  &lt;span&gt;...&lt;/span&gt;
+&lt;/div&gt;</code>
+      </span>
+      <span>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolorem exercitationem adipisci. Consequatur laborum rerum numquam nisi molestiae quidem officiis blanditiis et temporibus corrupti neque modi suscipit mollitia amet vel.</span>
+      <span>2. Eligendi repellat molestias dolor impedit dignissimos porro deleniti reiciendis blanditiis sit ratione error est in deserunt non fugiat similique sint quam earum ipsa quaerat soluta repellendus quia totam. Tenetur dignissimos.</span>
+      <span>3. Odio suscipit amet eligendi numquam nemo quos saepe voluptates. Tenetur rem rerum nam suscipit blanditiis vitae hic illo quaerat eaque perspiciatis explicabo beatae quibusdam labore quia ab repellat quos in!</span>
+    </div>
+
+    <hr />
+
+    <h1>Tabs : IMG + SPAN</h1>
+
+    <div id="tabs-img-data">
+      <span>
+        <code>$('#tabs-img').aAnyTabs({
+  dataId : 'tabs-img-data',
+  dataElement : 'span',
+});</code>
+      </span>
+      <span>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ipsum veniam enim debitis doloremque distinctio velit omnis possimus impedit hic fugiat sed reprehenderit quis saepe aspernatur nihil expedita repudiandae cum?</span>
+      <span>2. Quo dolor sint omnis accusamus et modi sequi dolorum magnam. A impedit libero sapiente sit adipisci tempora tempore magnam id totam in laboriosam expedita voluptates omnis neque delectus nesciunt voluptas!</span>
+      <span>3. Illo laborum quidem ab eum libero dolor nesciunt ipsam maiores voluptas a eaque totam perspiciatis expedita aspernatur ipsa repudiandae at. Nisi facilis assumenda et culpa sapiente quia deserunt cupiditate odio.</span>
+      <span>4. Quas reiciendis laudantium animi labore adipisci dignissimos ea autem maxime sed ipsam eius rem facilis enim alias deserunt dolorem est repellendus. Ullam numquam ipsam quae eveniet placeat inventore provident explicabo.</span>
+    </div>
+
+    <div id="tabs-img">
+      <a href="javascript:void(0);"><img src="http://lorempixel.com/80/80/sports/1" alt="imagen 1" /></a>
+      <a href="javascript:void(0);"><img src="http://lorempixel.com/80/80/sports/2" alt="imagen 2" /></a>
+      <a href="javascript:void(0);"><img src="http://lorempixel.com/80/80/sports/3" alt="imagen 3" /></a>
+      <a href="javascript:void(0);"><img src="http://lorempixel.com/80/80/sports/4" alt="imagen 4" /></a>
+    </div>
+  </section>
+
+  <footer>
+    <div id="footer">
+      <div class="info">
+        <img src="images/logo.png" alt="Alvaro Véliz" widdh="200" /><br />
+        COLLAPTABLE PLUGIN by Alvaro Véliz
+      </div>
+      <div class="more">
+        <h5>Other plugins</h5>
+        <ul>
+          <li><a href="https://github.com/alvaroveliz/aSimpleTour">aSimpleTour</a></li>
+          <li><a href="https://github.com/alvaroveliz/aCollapTable">aCollapTable</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

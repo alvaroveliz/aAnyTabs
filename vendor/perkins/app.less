@@ -1,0 +1,184 @@
+/* Init Perkins */
+@import "assets/_core";
+
+/* Perkins Bowties */
+@import "assets/_grid"; // Import the Configurable Grid System
+@import "assets/_feedback"; // Import Feedback helpers .notice, .success, .error, etc...
+@import "assets/_form"; // Import the styles for forms (ul.form>li>label+input)
+@import "assets/_table"; // Import styles for tables (responsive too)
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+// Config
+@p-headings: 'Roboto';
+@p-sans: 'Roboto';
+@p-blue: #1878DC;
+
+/**
+ *  Start building the next web here, Sir
+ */
+.row {
+  margin: 0 auto;
+  width: 960px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+code {
+  padding: 20px;
+  display: block; 
+  white-space: pre-wrap;  
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap; 
+  white-space: -o-pre-wrap; 
+  word-wrap: break-word; 
+  width: 100%; 
+  overflow-x:auto;
+  .box-sizing();
+}
+
+body {
+  background: #EEE;  
+}
+
+a {
+  color: @p-blue;
+  &:hover {
+    color: darken(@p-blue, 20%);
+  }
+}
+
+dl {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  .border-radius();
+  dt {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  dd {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+
+header {
+  .row();
+  #top {
+    h1 {
+      .grid(16);
+      padding: 10px;
+    }
+    h2 {
+      .grid(16);
+      color: #737373;
+      padding: 20px 0px;
+      text-align: center;
+    }
+    nav#menu {
+      .grid(16);
+      background: #F5F5F5;
+      ul {
+        .h-menu();
+        li {
+          a {
+            color: #737373;
+            padding: 10px 20px;
+            &:hover {
+              color: @p-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section#content {
+  .row();
+  padding: 20px;  
+}
+
+#tabs, #tabs-2 {
+  overflow: hidden;
+  ul, ol {
+    li {
+      a {
+        border: 1px solid #EEE;
+        &.current {
+          background: #FFF;
+          border: 1px solid #EEE;
+        }
+      }
+    }
+  }
+  dl {
+    background: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    dd {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      a {
+        padding: 20px;
+        margin-right: 2px;
+        .border-radius();
+        &.current, &:hover {
+          background: @p-blue;
+          color: @p-white;
+        }
+      }
+    }
+  }
+}
+
+#tabs-data, #tabs-2-data {
+  background: #FFF;
+  padding: 20px;
+  border: 1px solid #EEE;
+  margin-bottom: 20px;
+  .box-shadow();
+} 
+
+#tabs-img {
+  .grid(3);
+  a {
+    opacity: 0.4;
+    &.current {
+      opacity: 1;
+    }
+  }
+}
+
+#tabs-img-data {
+  .grid(13);
+  background: #FFF;
+  height: 165px;
+  padding: 20px;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.5);
+  #footer {
+    .row();
+    padding: 40px 0;
+    .info {
+      .column(12);
+      img {
+        width: 140px;
+      }
+    }
+    .more {
+      .column(4);
+      ul {
+        .h-menu();
+      }
+    }
+  }
+}
