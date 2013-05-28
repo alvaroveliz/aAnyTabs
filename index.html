@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>aAnyTabs</title>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <script src="components/jquery/jquery.min.js"></script>
+  <script src="javascripts/jquery.aAnyTabs.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#tabs').aAnyTabs({
+        indexElement : 'li',
+        dataId : 'tabs-data',
+        dataElement : 'p',
+      });
+
+      $('#tabs-2').aAnyTabs({
+        indexElement : 'li',
+        dataId : 'tabs-2-data',
+        dataElement : 'p',
+      });
+
+      $('#tabs-img').aAnyTabs({
+        dataId : 'tabs-img-data',
+        dataElement : 'span',
+      });
+    });
+    
+  </script>
+</head>
+<body>
+  
+  <h1> Tabs : UL, LI + P</h1>
+  <div id="tabs">
+    <ul class="t-menu">
+      <li><a href="javascript:void(0);">tab 1</a></li>
+      <li><a href="javascript:void(0);">tab 2</a></li>
+      <li><a href="javascript:void(0);">tab 3</a></li>
+      <li><a href="javascript:void(0);">tab 4</a></li>
+    </ul>
+  </div>
+
+  <div id="tabs-data">
+    <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolorem exercitationem adipisci. Consequatur laborum rerum numquam nisi molestiae quidem officiis blanditiis et temporibus corrupti neque modi suscipit mollitia amet vel.</p>
+    <p>2. Eligendi repellat molestias dolor impedit dignissimos porro deleniti reiciendis blanditiis sit ratione error est in deserunt non fugiat similique sint quam earum ipsa quaerat soluta repellendus quia totam. Tenetur dignissimos.</p>
+    <p>3. Odio suscipit amet eligendi numquam nemo quos saepe voluptates. Tenetur rem rerum nam suscipit blanditiis vitae hic illo quaerat eaque perspiciatis explicabo beatae quibusdam labore quia ab repellat quos in!</p>
+    <p>4. Veritatis ipsa optio velit necessitatibus sequi suscipit ad animi alias illum dolorem similique provident quae magnam doloribus repellat. Voluptatibus mollitia tenetur temporibus praesentium esse vero voluptatem fuga dolore repellat aperiam.</p>
+  </div>
+
+  <div id="tabs-2">
+    <ul class="t-menu">
+      <li><a href="javascript:void(0);">tab 1</a></li>
+      <li><a href="javascript:void(0);">tab 2</a></li>
+      <li><a href="javascript:void(0);">tab 3</a></li>
+      <li><a href="javascript:void(0);">tab 4</a></li>
+    </ul>
+  </div>
+
+  <div id="tabs-2-data">
+    <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolorem exercitationem adipisci. Consequatur laborum rerum numquam nisi molestiae quidem officiis blanditiis et temporibus corrupti neque modi suscipit mollitia amet vel.</p>
+    <p>2. Eligendi repellat molestias dolor impedit dignissimos porro deleniti reiciendis blanditiis sit ratione error est in deserunt non fugiat similique sint quam earum ipsa quaerat soluta repellendus quia totam. Tenetur dignissimos.</p>
+    <p>3. Odio suscipit amet eligendi numquam nemo quos saepe voluptates. Tenetur rem rerum nam suscipit blanditiis vitae hic illo quaerat eaque perspiciatis explicabo beatae quibusdam labore quia ab repellat quos in!</p>
+    <p>4. Veritatis ipsa optio velit necessitatibus sequi suscipit ad animi alias illum dolorem similique provident quae magnam doloribus repellat. Voluptatibus mollitia tenetur temporibus praesentium esse vero voluptatem fuga dolore repellat aperiam.</p>
+  </div>
+
+  <hr />
+
+  <h1>Tabs : IMG + SPAN</h1>
+
+  <div id="tabs-img">
+    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/1" alt="imagen 1" /></a>
+    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/2" alt="imagen 2" /></a>
+    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/3" alt="imagen 3" /></a>
+    <a href="javascript:void(0);"><img src="http://lorempixel.com/120/120/sports/4" alt="imagen 4" /></a>
+  </div>
+
+  <div id="tabs-img-data">
+    <span>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ipsum veniam enim debitis doloremque distinctio velit omnis possimus impedit hic fugiat sed reprehenderit quis saepe aspernatur nihil expedita repudiandae cum?</span>
+    <span>2. Quo dolor sint omnis accusamus et modi sequi dolorum magnam. A impedit libero sapiente sit adipisci tempora tempore magnam id totam in laboriosam expedita voluptates omnis neque delectus nesciunt voluptas!</span>
+    <span>3. Illo laborum quidem ab eum libero dolor nesciunt ipsam maiores voluptas a eaque totam perspiciatis expedita aspernatur ipsa repudiandae at. Nisi facilis assumenda et culpa sapiente quia deserunt cupiditate odio.</span>
+    <span>4. Quas reiciendis laudantium animi labore adipisci dignissimos ea autem maxime sed ipsam eius rem facilis enim alias deserunt dolorem est repellendus. Ullam numquam ipsam quae eveniet placeat inventore provident explicabo.</span>
+  </div>
+
+  <hr />
+
+  <h1>Tabs</h1>
+
+</body>
+</html>
