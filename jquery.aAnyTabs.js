@@ -15,6 +15,7 @@
         indexElement : null,
         dataId : '',
         dataElement : 'p',
+        onSelect: undefined
       };
 
       var options = $.extend(defaults, options);
@@ -37,8 +38,8 @@
             $('#'+o.dataId).children(o.dataElement).eq(_activeTabIndex).hide();
             $('#'+o.dataId).children(o.dataElement).eq($idx).show();
             _activeTabIndex = $idx;
+            typeof options.onSelect==='function' ? options.onSelect(k) : undefined;
           });
-          
         });
       });
     }
