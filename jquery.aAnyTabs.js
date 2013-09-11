@@ -15,7 +15,8 @@
         indexElement : null,
         dataId : '',
         dataElement : 'p',
-        onSelect: undefined
+        onSelect: undefined,
+        defaultIndex: 0
       };
 
       var options = $.extend(defaults, options);
@@ -24,9 +25,9 @@
       return this.each(function() {
         var o = options;  
         var obj = $(this);
-        var _activeTabIndex = 0;
+        var _activeTabIndex = parseInt(options.defaultIndex);
 
-        obj.find('a').eq(0).addClass('current');
+        obj.find('a').eq(_activeTabIndex).addClass('current');
         $('#'+options.dataId).children(options.dataElement).hide();
         $('#'+options.dataId).children(options.dataElement).eq(_activeTabIndex).show();
 
